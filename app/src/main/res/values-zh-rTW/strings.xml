@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ApiTest</string>
+    <string name="TestLyric">顯示測試歌詞</string>
+    <string name="TestIcon">自定義圖標</string>
+    <string name="CustomLyric">自定義歌詞</string>
+    <string name="Stop">停止</string>
+    <string name="activation">激活</string>
+    <string name="notactivation">未激活</string>
+</resources>
