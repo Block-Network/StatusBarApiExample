@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/StatusBarLyricAPI.iml" filepath="$PROJECT_DIR$/.idea/modules/StatusBarLyricAPI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/StatusBarLyricAPI.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/StatusBarLyricAPI.app.iml" />
     </modules>
   </component>
 </project>
