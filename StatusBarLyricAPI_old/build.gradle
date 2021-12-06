@@ -5,6 +5,7 @@ android {
     compileSdkVersion 30
 
     defaultConfig {
+        applicationId "statusbarlyric"
         minSdk 27
         targetSdk 31
         versionCode 1
