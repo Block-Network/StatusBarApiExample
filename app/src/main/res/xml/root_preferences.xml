@@ -6,11 +6,6 @@
         android:title="@string/TestLyric"/>
 
     <EditTextPreference
-        android:key="testicon"
-        android:summary="Base64"
-        android:title="@string/TestIcon"/>
-
-    <EditTextPreference
         android:key="testlyric1"
         android:title="@string/CustomLyric"/>
 
