@@ -7,7 +7,7 @@ import android.preference.EditTextPreference;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
 
-import StatusbarLyric.API.StatusBarLyric;
+import StatusBarLyric.API.StatusBarLyric;
 
 @SuppressWarnings("deprecation")
 
