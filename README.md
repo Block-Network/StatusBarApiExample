@@ -1,5 +1,7 @@
 # StatusBarAPi
 
+![](https://www.jitpack.io/v/577fkj/StatusBarApiExample.svg)
+
 [APIDemo](https://github.com/577fkj/StatusBarApiExample)
 
 [Jitpack](https://www.jitpack.io/#577fkj/StatusBarApiExample/v2.0)
@@ -37,6 +39,8 @@ Attention: if proguard is enabled, make sure API class won't be obfuscated:
 
 
 # StatusBarAPi
+
+![](https://www.jitpack.io/v/577fkj/StatusBarApiExample.svg)
 
 [APIDemo](https://github.com/577fkj/StatusBarApiExample)
 
