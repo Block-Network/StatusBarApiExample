@@ -1,10 +1,12 @@
 package StatusBarLyric.API;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.util.Base64;
+import android.util.Log;
 
 import java.io.ByteArrayOutputStream;
 
@@ -79,8 +81,31 @@ public class StatusBarLyric {
         return Base64.encodeToString(bytes, Base64.DEFAULT).replace("\n","");
     }
 
-    protected void sendLyric(Context context, String lyric, String icon, String serviceName, boolean useSystemMusicActive) {}
+    protected void sendLyric(Context context, String lyric, String icon, String serviceName, boolean useSystemMusicActive) {
+        // fallback if hook fails
+        if (!hasEnable()) {
+            Log.w("statusbar_lyric", "[use_fallback]" + lyric);
+            if (!lyric.isEmpty()) {
+                context.sendBroadcast(
+                        new Intent().setAction("Lyric_Server")
+                                .putExtra("Lyric_Type", "app")
+                                .putExtra("Lyric_Data", lyric)
+                                .putExtra("Lyric_PackName", serviceName)
+                                // Actually, PackName is (music) service name, so we have no suffix (.plus.BUILD_TYPE)
+                                .putExtra("Lyric_Icon", icon)
+                                .putExtra("Lyric_UseSystemMusicActive", useSystemMusicActive)
+                );
+            }
+        }
+    }
 
-    protected void stopLyric(Context context) {}
+    protected void stopLyric(Context context) {
+        // fallback if hook fails
+        if (!hasEnable()) {
+            context.sendBroadcast(
+                    new Intent().setAction("Lyric_Server").putExtra("Lyric_Type", "app_stop")
+            );
+        }
+    }
 
 }
