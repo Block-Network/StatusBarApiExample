@@ -25,13 +25,6 @@ dependencies {
 import StatusBarLyric.API.StatusBarLyric;
 ```
 
-Add under application in AndroidManifest.xml
-```xml
-<meta-data
-android:name="XStatusBarLyric"
-android:value="true" />
-```
-
 Attention: if proguard is enabled, make sure API class won't be obfuscated:
 ```shrinker_config
 -keep class StatusBarLyric.API.StatusBarLyric {*;}
@@ -63,13 +56,6 @@ dependencies {
 
 ```java
 import StatusBarLyric.API.StatusBarLyric;
-```
-
-在AndroidManifest.xml 中的 application 下添加
-```xml
-<meta-data
-android:name="XStatusBarLyric"
-android:value="true" />
 ```
 
 注意: 若开启了 proguard 请保证 API 类不被混淆:
